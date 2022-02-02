@@ -15,13 +15,42 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Column(
-          children: [
-            Expanded(
-              child: PrefetchImageDemo(),
+      home: DefaultTabController(
+        length: 5,
+        child: Scaffold(
+          drawer: Drawer(
+            backgroundColor: Colors.amber,
+          ),
+          appBar: AppBar(
+            title: Text('Bangabandhu College'),
+            centerTitle: true,
+            bottom: TabBar(
+              tabs: [
+                Tab(
+                  text: "Cat",
+                ),
+                Tab(
+                  text: "Cat",
+                ),
+                Tab(
+                  text: "Cat",
+                ),
+                Tab(
+                  text: "Cat",
+                ),
+                Tab(
+                  text: "Cat",
+                ),
+              ],
             ),
-          ],
+          ),
+          body: Column(
+            children: [
+              Expanded(
+                child: PrefetchImageDemo(),
+              ),
+            ],
+          ),
         ),
       ),
     );
